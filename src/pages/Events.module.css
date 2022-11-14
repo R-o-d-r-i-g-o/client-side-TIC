@@ -4,24 +4,24 @@
   font-size: 25px;
   font-weight: 500;
   margin: 18px
-}
+} */
 
 section.taskList {
   background: var(--shapes);
   border-radius: 1rem;
-  margin-top: -10rem;
+  margin-top: 1rem;
   padding: 70px 60px;
   filter: drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.06));
 }
 
-header {
+.taskList header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-header h2 {
+.taskList header h2 {
   color: var(--text-title);
   font-size: 2.25rem;
 }
@@ -49,7 +49,7 @@ header h2 {
   color: var(--text-light)
 }
 
-button {
+ button {
   font-weight: 600;
   border-radius: 8px;
   border: 0;
@@ -61,10 +61,9 @@ button {
 
   padding: 14px;
   transition: filter 0.2s;
-
 }
 
-button:hover {
+.inputGroup button:hover {
   filter: brightness(0.95);
 }
 
@@ -72,31 +71,40 @@ main {
   margin-top: 3rem;
 }
 
-ul {
+main ul {
   list-style: none;
 }
 
-li {
+main ul li {
   display: flex;
+  margin: 15px 0;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #EBEBEB;
   padding: 1rem 0;
 }
-div {
+
+main ul li div {
   display: flex;
   align-items: center;
   gap: 14px;
   outline: 0;
 }
-p {
+
+main ul li div p {
   font-size: 1rem;
   color: var(--text);
 }
+
+/* até aqui certo */
+
+
 div.completed p {
   text-decoration:line-through;
   opacity: 0.6;
 }
+
+
 div .checkboxContainer {
   display: block;
   position: relative;
@@ -106,7 +114,7 @@ div .checkboxContainer {
 
 .checkboxContainer input{
   position: absolute;
-  opacity: 0;
+  opacity: 1;
   cursor: pointer;
   height: 0;
   width: 0;
@@ -116,9 +124,11 @@ div .checkboxContainer {
   background-color: var(--blue);
 }
 
+
 .checkboxContainer input:checked ~ .checkmark:after {
   background-color: var(--blue);
 }
+
 
 .checkboxContainer .checkmark {
   position: absolute;
@@ -143,15 +153,10 @@ div .checkboxContainer {
   transform: rotate(45deg);
 }
 
-li button {
-  background: transparent;
-  border: 0;
+/* main li button:hover {
+  color: red;
 }
 
-li button svg {
+main li button svg {
   color: var(--red);
-}
-
-li button svg:hover {
-  filter: brightness(0.5)
 } */

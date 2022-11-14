@@ -1,3 +1,5 @@
+/* For desktop version */
+
 .sidebar{
   position: fixed;
   left: 0;
@@ -25,7 +27,6 @@
   opacity: 0;
   transition: all 0.5s ease;
 }
-
 
 #paroquia {
     display: none;
@@ -109,14 +110,6 @@
 .sidebarOpen li .tooltip{
   display: none;
 }
-.sidebarOpen .bxSearch:hover{
-  background: #1d1b31;
-  color: #FFF;
-}
-.sidebar .bxSearch:hover{
-  background: var(--white-default);
-  color: var(--blue-default);
-}
 .sidebar li .linkReference{
   display: flex;
   height: 100%;
@@ -183,7 +176,7 @@
 
 }
 .sidebar li.profile .name,
-.sidebar li.profile .job{
+.sidebar li.profile .job {
   font-size: 15px;
   font-weight: 400;
   color: #fff;
@@ -225,8 +218,84 @@
   width: calc(100% - 250px);
 }
 
-@media (max-width: 420px) {
+/* For mobile version */
+@media (max-width: 700px) {
+
   .sidebar li .tooltip{
     display: none;
   }
+
+  .sidebarOpen,
+  .sidebar .profile,
+  .sidebar .logoDetails,
+  .sidebar .sidebarOpen,
+  .sidebarOpen #paroquia{
+    display: none;
+  }
+
+  .homeSection{
+    left: 0;
+    width: 100vw;
+  }
+
+  .sidebarOpen ~ .homeSection {
+    left: 0px;
+    width: 100%;
+    }
+
+  .sidebarOpen li .linkReference .links_name{
+    display: none;
+  }
+
+  .sidebar, .sidebarOpen {
+    top: 90%;
+    padding: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .sidebar .navList {
+    margin-top: 0;
+    display: flex;
+  }
+
+  .sidebar .navList li{
+    top: 0;
+    margin: 8px 5px 0 5px;
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+  }
+
+  .sidebar .navList li .linkReference {
+
+    right: 0;
+    height: 52px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    cursor: default;
+  }
+
+  .sidebar .navList li linkReference i{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+  }
+
 }
+
+

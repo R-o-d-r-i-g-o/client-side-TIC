@@ -1,11 +1,11 @@
 import styles from './Pastors.module.css'
+import { QuestionatePopUP } from './../components/PopUp.jsx'
 
 export const Pastors = () => {
 
     return (
         <div>
-            <div className={styles.text}>Dashboard</div>
-            <p>jjfkdsjklkl</p>
+            {/* <QuestionatePopUP /> */}
         </div>
     );
 };

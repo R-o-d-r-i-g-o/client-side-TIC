@@ -12,15 +12,16 @@ import {  Pastors  } from './pages/Pastors.jsx';
 import {  Events   } from './pages/Events.jsx';
 import { Community } from './pages/Community.jsx';
 import {   User    } from './pages/User.jsx';
+import {  Enter    } from './pages/Enter.jsx';
 
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route   path='/' element={<Menu />}>
-          <Route index    element={ <Pastors />} />
-
+        <Route  path='Enter' element={<Enter />}/>
+        <Route  path='/' element={<Menu />}>
+        <Route index   element={ <Pastors />} />
           <Route path='Pastors'   element={ <Pastors />} />
           <Route path='Events'    element={ <Events />} />
           <Route path='Community' element={ <Community />} />
